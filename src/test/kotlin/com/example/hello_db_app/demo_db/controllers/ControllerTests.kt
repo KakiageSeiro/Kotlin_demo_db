@@ -78,7 +78,7 @@ class ControllerTests {
     //対象が存在するDELETEのテスト
     @Test
     @Sql(statements = ["INSERT INTO user (name) VALUES ('delete_data');"])
-    fun deleteuserTest() {
+    fun deleteUserTest() {
         val lastUser: User = target.userRepository.findAll().last()
 
         mockMvc.perform(
